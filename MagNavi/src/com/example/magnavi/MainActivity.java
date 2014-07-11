@@ -4,6 +4,7 @@ package com.example.magnavi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,12 @@ import android.widget.Button;
 public class MainActivity extends Activity
 {
   Button btnonenterButton,btnonexitButton;
+  byte []ins1={(byte)0xf1,(byte)0x01,(byte)0x01};
+  byte []ins2={(byte)0xf1,(byte)0x01,(byte)0x01};
+  byte []ins3={(byte)0xf1,(byte)0x01,(byte)0x01};
+  byte []ins4={(byte)0xf1,(byte)0x01,(byte)0x01};
+  byte []ins5={(byte)0xf1,(byte)0x01,(byte)0x01};
+  byte []test;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -18,6 +25,10 @@ public class MainActivity extends Activity
 		setContentView(R.layout.activity_main);
 		btnonenterButton=(Button)findViewById(R.id.btn_enter);
 		btnonexitButton=(Button)findViewById(R.id.btn_exit);
+		test=new byte[1];
+		test[0]=(byte)0xf1;
+		ins1(ins1,3);
+		
 	}
 
 	@Override
@@ -41,4 +52,11 @@ public class MainActivity extends Activity
 		System.exit(0);
 	}
 
+	
+	public void ins1(byte data[], int len)
+	{
+		 
+		 
+		
+	}
 }
