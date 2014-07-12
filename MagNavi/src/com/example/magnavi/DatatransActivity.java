@@ -1,5 +1,7 @@
 package com.example.magnavi;
 
+import java.io.UnsupportedEncodingException;
+
 import com.magnavi.util.mag_protocol;
 
 import android.app.Activity;
@@ -23,9 +25,9 @@ public class DatatransActivity extends Activity
 	}
 
 	
-	public void onclickins1(View v)
+	public void onclickins1(View v) throws UnsupportedEncodingException
 	{
-		byte ins1[]=mag_protocol.get_mag_power_status(0, 1);
+		byte ins1[]=mag_protocol.get_mag_power_status(mag_protocol.ins1, 0, 1);
 		
 		
 		
